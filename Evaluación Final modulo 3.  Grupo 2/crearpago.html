@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Pago</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Librería menú-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Librería bootsatrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Scrip menu-->
+    <script src="menu.js"></script>
+    <!-- Scrip BOTONES  -->
+    <script src="Botones.js"></script>
+</head>
+
+<body>
+
+    <div>
+        <img src="https://evaluaciones.alineosoft.com/gentelella-master/production/images/logo-humanidea.png">
+    </div>
+
+    <div class="topnav" id="myTopnav">
+        <ul class="nave">
+            <li><a href="javascript:void(0);" class="icon" onclick="menu()">
+                    <i class="fa fa-bars"></i>
+                </a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a class="active"> Crear </a>
+                <ul>
+                    <li><a href="crearcapacitacion.html">Crear Capacitacion</a></li>
+                    <li><a href="crearusuario.html">Crear Usuario</a></li>
+                    <li><a href="crearpago.html">Crear Pago</a></li>
+                    <li><a href="crearasesorias.html">Crear Asesoría</a></li>
+                </ul>
+            </li>
+            <li> <a> Listado </a>
+                <ul>
+                    <li><a href="listarcapacitaciones.html">Listado de Capacitaciones</a></li>
+                    <li><a href="listadousuarios.html">Listado de Usuarios</a></li>
+                    <li><a href="listadovisitas.html">Listado de Visitas</a></li>
+                    <li> <a href="listadopago.html">Listado de Pago</a></li>
+                    <li> <a href="listadoasesorias.html">Listado de Asesorías</a></li>
+                    <li> <a href="listadoaccidentes.html">Listado de Accidentes</a></li>
+                </ul>
+            </li>
+            <li><a href="reportes.html">Reportes</a></li>
+            <li><a href="administrarasistentes.html">Administrar Asistentes</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </div>
+
+    <div class="container"> 
+        <h2 class="titulo">Creando Pago</h2>
+    </div>
+
+    <div class="centrar">
+        <form id="formulario" onsubmit="return validador();">
+            <p>Ingrese monto de pago</p>
+            <input type="number" id="pago" name="pago" onblur="validador();">
+            <p>Mes de pago</p>
+            <select name="Mes">
+                <option>Enero</option>
+                <option>Febrero</option>
+                <option>Marzo</option>
+                <option>Abril</option>
+                <option>Mayo</option>
+                <option>Junio</option>
+                <option>Julio</option>
+                <option>Agosto</option>
+                <option>Septiembre</option>
+                <option>Octubre</option>
+                <option>Noviembre</option>
+                <option>Diciembre</option>
+            </select>
+            <p>Año de pago</p>
+            <select name="Ano">
+                <option>2010</option>
+                <option>2011</option>
+                <option>2012</option>
+                <option>2013</option>
+                <option>2014</option>
+                <option>2015</option>
+                <option>2016</option>
+                <option>2017</option>
+                <option>2018</option>
+                <option>2019</option>
+                <option>2020</option>
+                <option>2021</option>
+                <option>2022</option>
+                <option>2023</option>
+                <option>2024</option>
+                <option>2025</option>
+                <option>2026</option>
+                <option>2027</option>
+                <option>2028</option>
+                <option>2029</option>
+                <option>2030</option>
+                <option>2031</option>
+                <option>2032</option>
+                <option>2033</option>
+                <option>2034</option>
+                <option>2035</option>
+                <option>2036</option>
+                <option>2037</option>
+                <option>2038</option>
+                <option>2039</option>
+                <option>2040</option>
+                <option>2041</option>
+                <option>2042</option>
+                <option>2043</option>
+                <option>2044</option>
+                <option>2045</option>
+                <option>2046</option>
+                <option>2047</option>
+                <option>2048</option>
+                <option>2049</option>
+                <option>2050</option>
+            </select>
+            <p>RUT cliente</p>
+            <input type="text" id="rut" name="rut" onblur="validador();">
+            <p>Fecha ingreso de pago</p>
+            <p id="date"></p>
+            <input type="submit" value="Ingresar pago">
+            <br>
+        </form>
+    </Div>
+</body>
+
+</html>

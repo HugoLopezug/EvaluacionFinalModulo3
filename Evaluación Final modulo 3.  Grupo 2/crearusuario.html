@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Usuario</title>
+    <link rel="stylesheet" href="style.css">
+     <!-- Librería menú-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <!-- Librería bootsatrap-->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <!-- Scrio menpu-->
+    <script src="menu.js"></script>
+</head>
+
+<body>
+    <div>
+        <img src="https://evaluaciones.alineosoft.com/gentelella-master/production/images/logo-humanidea.png">
+    </div>
+
+    <div class="topnav" id="myTopnav">
+        <ul class="nave">
+            <li><a href="javascript:void(0);" class="icon" onclick="menu()">
+                    <i class="fa fa-bars"></i>
+                </a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="contacto.html" >Contacto</a></li>
+            <li><a class="active"> Crear </a>
+                <ul>
+                    <li><a href="crearcapacitacion.html">Crear Capacitacion</a></li>
+                    <li><a href="crearusuario.html">Crear Usuario</a></li>
+                    <li><a href="crearpago.html">Crear Pago</a></li>
+                    <li><a href="crearasesorias.html">Crear Asesoría</a></li>
+                </ul>
+            </li>
+            <li> <a> Listado </a>
+                <ul>
+                    <li><a href="listarcapacitaciones.html">Listado de Capacitaciones</a></li>
+                    <li><a href="listadousuarios.html">Listado de Usuarios</a></li>
+                    <li><a href="listadovisitas.html">Listado de Visitas</a></li>
+                    <li><a href="listadopago.html">Listado de Pago</a></li>
+                    <li><a href="listadoasesorias.html">Listado de Asesorías</a></li>
+                    <li><a href="listadoaccidentes.html">Listado de Accidentes</a></li>
+                </ul>
+            </li>
+            <li><a href="reportes.html">Reportes</a></li>
+            <li><a href="administrarasistentes.html">Administrar Asistentes</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </div>
+
+    <div class="container"> 
+        <h2 class="titulo">Formulario Usuario</h2>
+    </div>
+
+    <div class="centrar">
+        <form class="bloque" id="formulario">  
+            <p>Nombres</p>
+            <input type="text">
+            <p>Apellidos</p>
+            <input type="text">
+            <p>Fecha de Nacimiento</p>
+            <input type="datetime" name="" id="">
+            <p>RUN</p>
+            <input type="number">
+            <p>Tipo de Usuario</p>
+            <select name="Tipo Usuario">
+                <option>Cliente</option>
+                <option>Administrativo</option>
+                <option>Funcionario</option>
+                </select>
+        </form>    
+    </div> 
+</body>
+</html>

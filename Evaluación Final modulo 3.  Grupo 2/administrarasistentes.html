@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Administrar Asistentes</title>
+    <!-- Librería menú-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Librería bootsatrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <!-- Librerías tabla -->
+   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.jqueryui.min.css">
+   
+   
+    <!-- Scrips boton -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <!-- Scrips data table y botones -->
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <!-- Scrips data table y botones -->
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/dataTables.jqueryui.min.js"></script>
+    <script>
+         $(document).ready(function () {
+             $('#administrarasistentes').DataTable({
+                 language: {
+                     url: 'http://cdn.datatables.net/plug-ins/1.10.24/i18n/Spanish.json'
+                 }
+             });
+         });
+     </script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script> 
+     <script src="script.js"></script>
+</head>
+
+<body>
+    <!-- Imagen HumanIDea -->
+    <div>
+        <img src="https://evaluaciones.alineosoft.com/gentelella-master/production/images/logo-humanidea.png">
+    </div>
+
+    <!-- Menú-->
+    <div class="topnav" id="myTopnav">
+        <ul class="nave">
+            <li><a href="javascript:void(0);" class="icon" onclick="menu()">
+                    <i class="fa fa-bars"></i>
+                </a></li>
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a> Crear </a>
+                <ul>
+                    <li><a href="crearcapacitacion.html">Crear Capacitacion</a></li>
+                    <li><a href="crearusuario.html">Crear Usuario</a></li>
+                    <li><a href="crearpago.html">Crear Pago</a></li>
+                    <li><a href="crearasesorias.html">Crear Asesoría</a></li>
+                </ul>
+            </li>
+            <li> <a> Listado </a>
+                <ul>
+                    <li><a href="listarcapacitaciones.html">Listado de Capacitaciones</a></li>
+                    <li><a href="listadousuarios.html">Listado de Usuarios</a></li>
+                    <li><a href="listadovisitas.html">Listado de Visitas</a></li>
+                    <li><a href="listadopago.html">Listado de Pago</a></li>
+                    <li><a href="listadoasesorias.html">Listado de Asesorías</a></li>
+                    <li><a href="listadoaccidentes.html">Listado de Accidentes</a></li>
+                </ul>
+            </li>
+            <li><a href="reportes.html">Reportes</a></li>
+            <li><a href="administrarasistentes.html">Administrar Asistentes</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+        <!-- Scrip menú -->
+        <script src="menu.js"></script>
+    </div>
+
+    <!-- título página -->
+    <div class="titulo"><h2>Listado de Asistentes</h2> </div>
+
+
+    <!-- Tabla -->
+    <div class="container">
+        <table id="administrarasistentes" class="table table-striped table-bordered" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Teléfono</th>
+                    <th> </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0125</td>
+                    <td>Luis Moncada</td>
+                    <td>lmoncada@gmail.com</td>
+                    <td>+56941527598</td>
+                    <td>
+                        <button>Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>0126</td>
+                    <td>Carla Vargas</td>
+                    <td>cvargas@gmail.com</td>
+                    <td>+56912347896</td>
+                    <td>
+                        <button>Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>0127</td>
+                    <td>Javiera Goméz</td>
+                    <td>javgomez@gmail.com</td>
+                    <td>+56974859610</td>
+                    <td>
+                        <button>Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>0128</td>
+                    <td>Mathias Sepulvera</td>
+                    <td>msepulvera@gmail.com</td>
+                    <td>+56979461391</td>
+                    <td>
+                        <button>Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>0129</td>
+                    <td>Lucas Briones</td>
+                    <td>lbriones@gmail.com</td>
+                    <td>+56919738246</td>
+                    <td>
+                        <button>Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>0130</td>
+                    <td>Berta Cox</td>
+                    <td>bertacox@gmail.com</td>
+                    <td>+56925368598</td>
+                    <td>
+                        <button>Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>0131</td>
+                    <td>Maria Casanova</td>
+                    <td>macasanova@gmail.com</td>
+                    <td>+56945647896</td>
+                    <td>
+                        <button>Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>0132</td>
+                    <td>Fabiola Molero</td>
+                    <td>fmolero@gmail.com</td>
+                    <td>+5697487485</td>
+                    <td>
+                        <button>Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>0133</td>
+                    <td>Patricia Paldo</td>
+                    <td>patripaldo@gmail.com</td>
+                    <td>+56928561391</td>
+                    <td>
+                        <button>Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>0134</td>
+                    <td>Martha Baez</td>
+                    <td>mbaez@gmail.com</td>
+                    <td>+56919456246</td>
+                    <td>
+                        <button>Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- boton modal-->
+    <div class="centrar">
+        <button type="button" class="btn btn-dark" data-toggle="modal" data-target=".bd-example-modal-lg">
+            Agregar Asistente</button>
+    </div>
+    <br>
+    <!-- modal -->
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <form id="formulario" name="formulario" action="#" class="centrar">
+                    <h1>Agregar asistente</h1>
+                    <br>
+                    <p> ID asistente </p>                   
+                    <input id="idAsist" name="idAsist" type="number" placeholder="8888">
+                    <p>Nombre Completo</p>
+                    <input type="text" id="nombreCompleto" name="nombreCompleto" placeholder="Su nombre aqui">
+                    <p>Edad</p>
+                    <input type="number" id="edad" name="edad" placeholder="Maximo 150">
+                    <p>Correo</p>
+                    <input type="email" id="correo" name="correo" placeholder="Ejemplo@correo.cl">
+                    <p>Teléfono</p>
+                    <input type="text" id=telefono name="telefono" placeholder="+569XXXXXXXX">
+                    <br>
+                    <button type="submit">Crear Asistente</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

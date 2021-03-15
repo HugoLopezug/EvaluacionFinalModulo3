@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Administrativo</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Librería bootsatrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- Librería menú-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Scrip menu-->
+    <script src="menu.js"></script>
+    <!-- Scrip botones-->
+    <script src="Botones.js"></script>
+</head>
+
+<body>
+
+    <div>
+        <img src="https://evaluaciones.alineosoft.com/gentelella-master/production/images/logo-humanidea.png">
+    </div>
+
+    <div class="topnav" id="myTopnav">
+        <ul class="nave">
+            <li><a href="javascript:void(0);" class="icon" onclick="menu()">
+                    <i class="fa fa-bars"></i>
+                </a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a> Crear </a>
+                <ul>
+                    <li><a href="crearcapacitacion.html">Crear Capacitacion</a></li>
+                    <li><a href="crearusuario.html">Crear Usuario</a></li>
+                    <li><a href="crearpago.html">Crear Pago</a></li>
+                    <li><a href="crearasesorias.html">Crear Asesoría</a></li>
+                </ul>
+            </li>
+            <li> <a> Listado </a>
+                <ul>
+                    <li><a href="listarcapacitaciones.html">Listado de Capacitaciones</a></li>
+                    <li><a href="listadousuarios.html">Listado de Usuarios</a></li>
+                    <li><a href="listadovisitas.html">Listado de Visitas</a></li>
+                    <li><a href="listadopago.html">Listado de Pago</a></li>
+                    <li><a href="listadoasesorias.html">Listado de Asesorías</a></li>
+                    <li><a href="listadoaccidentes.html">Listado de Accidentes</a></li>
+                </ul>
+            </li>
+            <li><a href="reportes.html">Reportes</a></li>
+            <li><a href="administrarasistentes.html">Administrar Asistentes</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </div>
+
+    <div class="container"> 
+        <h2 class="titulo">Ingrese datos de Administrativo</h2>
+    </div>
+
+
+    <div class="centrar">
+        <form class="bloque" id="formulario">
+            <p>Ingrese RUN del Administrativo que desea modificar</p>
+            <input type="number">
+            <p>Nombres</p>
+            <input type="text">
+            <p>Apellidos</p>
+            <input type="text">
+            <p>Correo Electronico</p>
+            <input type="text">
+            <p>Área a la que pertenece</p>
+            <input type="text">
+        </form>
+    </div>
+</body>
+
+</html>

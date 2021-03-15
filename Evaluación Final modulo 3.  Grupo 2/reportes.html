@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reportes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="menu.js"></script>
+    <!-- Librería menú-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Librería bootsatrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div>
+        <img src="https://evaluaciones.alineosoft.com/gentelella-master/production/images/logo-humanidea.png">
+    </div>
+
+    <div class="topnav" id="myTopnav">
+        <ul class="nave">
+            <li><a href="javascript:void(0);" class="icon" onclick="menu()">
+                    <i class="fa fa-bars"></i>
+                </a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a> Crear </a>
+                <ul>
+                    <li><a href="crearcapacitacion.html">Crear Capacitacion</a></li>
+                    <li><a href="crearusuario.html">Crear Usuario</a></li>
+                    <li><a href="crearpago.html">Crear Pago</a></li>
+                    <li><a href="crearasesorias.html">Crear Asesoría</a></li>
+                </ul>
+            </li>
+            <li> <a> Listado </a>
+                <ul>
+                    <li><a href="listarcapacitaciones.html">Listado de Capacitaciones</a></li>
+                    <li><a href="listadousuarios.html">Listado de Usuarios</a></li>
+                    <li><a href="listadovisitas.html">Listado de Visitas</a></li>
+                    <li><a href="listadopago.html">Listado de Pago</a></li>
+                    <li><a href="listadoasesorias.html">Listado de Asesorías</a></li>
+                    <li><a href="listadoaccidentes.html">Listado de Accidentes</a></li>
+                </ul>
+            </li>
+            <li><a href="reportes.html" class="active">Reportes</a></li>
+            <li><a href="administrarasistentes.html">Administrar Asistentes</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </div>
+
+
+    <div class="container">
+        <h2 class="titulo">Reportes</h2>
+    </div>
+
+    <div class="container">
+        <h4 class="titulo">Clientes por comuna</h4>
+        <canvas id="myChart"></canvas>
+    </div>
+    
+    <div class="container">
+        <h4 class="titulo">Accidentes vs visitas</h4>
+        <canvas id="myChart1"></canvas>
+    </div>
+   
+    <div class="container">
+        <h4 class="titulo">Cumplimientos y visitas</h4>
+        <canvas id="myChart2"></canvas>
+    </div>
+ 
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        Chart.defaults.scale.ticks.beginAtZero = true;
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Santiago', 'Maipu', 'Providencia', 'La Florida', 'Las Condes'],
+                datasets: [{
+                    label: 'Clientes por comunas',
+                    backgroundColor: ['red', 'blue', 'green', 'skyblue', 'orange'],
+                    borderColor: [''],
+                    data: [5, 2, 11, 3, 8]
+                },
+                ]
+            },
+            options: { responsive: true }
+        });
+
+        var ctx = document.getElementById('myChart1').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+
+
+            data: {
+                labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', ' Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+                datasets: [{
+                    label: 'Accidentes',
+                    data: [5, 7, 3, 1, 2, 4, 8, 6, 2, 1, 1, 2],
+                    backgroundColor: 'rgba(216, 26, 26)',
+                    borderColor: 'yellow',
+                    borderWidth: 1
+                },
+
+                {
+                    label: 'Visitas',
+                    data: [0, 5, 6, 2, 2, 0, 1, 6, 5, 7, 3, 3],
+                    backgroundColor: 'rgba(9, 154, 91)',
+                    borderColor: 'blue',
+                    borderWidth: 1,
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+
+        var ctx2 = document.getElementById('myChart2').getContext('2d');
+        var chart = new Chart(ctx2, {
+            type: 'doughnut',
+            data:
+            {
+                datasets: [{
+                    data: [13, 2, 7],
+                    backgroundColor: ['#42a5f5', 'red', 'green',],
+                    label: 'Comparacion de navegadores'
+                }],
+                labels: [
+                    'Visitas cumplidas',
+                    'Visitas no cumplidas',
+                    'Visitas cumplidas con observaciones',
+
+                ]
+            },
+            options: {
+                tooltips: {
+                    callbacks: {
+                        label: function (tooltipItem, data) {
+                            var allData = data.datasets[tooltipItem.datasetIndex].data;
+                            var tooltipLabel = data.labels[tooltipItem.index];
+                            var tooltipData = allData[tooltipItem.index];
+                            var total = 0;
+                            for (var i in allData) {
+                                total += allData[i];
+                            }
+                            var tooltipPercentage = Math.round((tooltipData / total) * 100);
+                            return tooltipLabel + ': ' + tooltipPercentage + '%';
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
